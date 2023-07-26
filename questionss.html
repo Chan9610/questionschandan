@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Question</title>
+</head>
+<body>
+
+
+<p id="qp">Click the button to start!</p>
+
+
+<button onclick="qchange()">Start Question</button>
+
+<script>
+  const questions = [
+    {
+      question: "1+2"
+    },
+    {
+      question: "1+2+3"
+    },
+    {
+      question: "1+2+3+4"
+    },
+    {
+      question: "1+2+3+4+5"
+    }
+  ];
+
+  let QIndex = 0;
+  const qp = document.getElementById("qp");
+
+  function displayQuestion() {
+    qp.textContent = questions[QIndex].question;
+    QIndex = (QIndex + 1) % questions.length;
+  }
+
+  function qchange() {
+       displayQuestion();
+
+    setInterval(displayQuestion, 3000);
+  }
+</script>
+
+</body>
+</html>

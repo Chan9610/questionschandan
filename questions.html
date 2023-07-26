@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="q">
+        <p id="questionParagraph"> </p>
+        
+    <button id="btn">Click Here</button>
+    
+</div>
+</body>
+</html>
+<script>
+    const questions= [
+        {
+            question: "1+2"
+        },
+        {
+            question: "1+2+3"
+        },
+        {
+            question: "1+2+3+4"
+        },
+        {
+            question: "1+2+3+4+5"
+        }
+    ]
+    let a= document.getElementById("q");
+    let b= document.getElementById("btn");
+    
+    b.onclick = () => {
+        let x= document.createElement("h1");
+        x.innerHTML=questions[0].question
+        a.appendChild(x)
+    }
+</script>
